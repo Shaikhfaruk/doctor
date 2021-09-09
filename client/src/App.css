@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --primary-color: #185ee0;
+  --secondary-color: #e6eef9;
+  --navbar-color: #00c8ab;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+ul {
+  list-style-type: none;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 9vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background: var(--navbar-color);
+}
+.nav-items {
+  display: flex;
+}
+.nav-item {
+  padding: 0 0.5em;
+}
+.btn {
+  padding: 0.5em;
+  border-radius: 0.2em;
+  border: none;
+  margin: 0 0.5em;
+}
+
+/* @media (max-width: 700px) {
+  .tabs {
+    transform: scale(0.6);
+  }
+} */
