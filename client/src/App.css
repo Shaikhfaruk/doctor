@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
-
 :root {
   --primary-color: #185ee0;
   --secondary-color: #e6eef9;
@@ -8,20 +6,25 @@
 
 *,
 *:after,
-*:before {
-  box-sizing: border-box;
-}
+*:before,
 html,
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 ul {
   list-style-type: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  padding: 7px;
 }
 .navbar {
   display: flex;
@@ -44,10 +47,101 @@ ul {
   border-radius: 0.2em;
   border: none;
   margin: 0 0.5em;
+  width: 65px;
+}
+.btn a {
+  color: var(--navbar-color);
+}
+a:focus {
+  color: var(--primary-color);
 }
 
-/* @media (max-width: 700px) {
-  .tabs {
-    transform: scale(0.6);
+.search {
+  display: flex;
+  align-items: center;
+}
+.search input {
+  border: none;
+  height: 29px;
+  border-radius: 1.2em;
+  width: 200px;
+}
+.search-icon {
+  position: relative;
+  right: 25px;
+  color: var(--navbar-color);
+}
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 50px;
+  height: 50px;
+}
+.menu-btn-burger {
+  width: 30px;
+  height: 4px;
+  background: var(--secondary-color);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  animation: load 1.8s ease-in-out infinite;
+}
+.menu-btn-burger::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  background: var(--secondary-color);
+}
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  background: var(--secondary-color);
+}
+.menu-btn-burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn-burger::after {
+  transform: translateY(16px);
+}
+.menu-btn.open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+.menu-btn.open .menu-btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+@media (min-width: 798px) {
+  .menu-btn {
+    display: none;
   }
-} */
+}
+@media (max-width: 798px) {
+  .nav-items {
+    display: none;
+  }
+}
+@media (max-width: 571px) {
+  .loginbtn {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .search {
+    display: none;
+  }
+}
