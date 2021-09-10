@@ -5,13 +5,16 @@ import { BiSearch } from "react-icons/bi";
 const Navbar = () => {
   document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.querySelector(".menu-btn");
+    const navItems = document.querySelector(".nav-items");
     let menuOpen = false;
     menuBtn.addEventListener("click", () => {
       if (!menuOpen) {
         menuBtn.classList.add("open");
+        navItems.classList.add("nav-items-open");
         menuOpen = true;
       } else {
         menuBtn.classList.remove("open");
+        navItems.classList.remove("nav-items-open");
         menuOpen = false;
       }
     });
