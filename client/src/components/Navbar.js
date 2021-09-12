@@ -25,7 +25,12 @@ const Navbar = () => {
         <Link to="/">Doctor</Link>
       </div>
       <div className="search">
-        <input type="search" name="search" id="search" />
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search for Consult"
+        />
         <BiSearch className="search-icon" />
       </div>
 
@@ -57,11 +62,7 @@ const Navbar = () => {
 
       <div className="loginbtn">
         <button className="btn">
-          <Link to="/login">Login</Link>
-        </button>
-
-        <button className="btn">
-          <Link to="/signup">Signup</Link>
+          <Link to="/login">Login / Register</Link>
         </button>
       </div>
       <div className="menu-btn">

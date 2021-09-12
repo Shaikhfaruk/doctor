@@ -25,7 +25,7 @@ ul {
 textarea:focus,
 input:focus {
   outline: none;
-  padding: 7px;
+  caret-color: var(--navbar-color);
 }
 .navbar {
   display: flex;
@@ -44,11 +44,11 @@ input:focus {
   padding: 0 0.5em;
 }
 .btn {
-  padding: 0.5em;
+  padding: 8px 14px;
   border-radius: 0.2em;
   border: none;
   margin: 0 0.5em;
-  width: 65px;
+  font-size: 14px;
 }
 .btn a {
   color: var(--navbar-color);
@@ -60,16 +60,33 @@ a:focus {
 .search {
   display: flex;
   align-items: center;
+  width: 160px;
 }
 .search input {
   border: none;
-  height: 29px;
+  height: 30px;
   border-radius: 1.2em;
-  width: 200px;
+  width: 30px;
+  padding: 0 15px;
+  transition: all ease-in-out 0.5s;
 }
+.search input:hover {
+  width: 200px;
+  transition: all ease-in-out 0.5s;
+}
+
+.search input::-webkit-search-cancel-button {
+  display: none;
+}
+::placeholder {
+  position: relative;
+  left: 5px;
+  color: var(--navbar-color);
+}
+
 .search-icon {
   position: relative;
-  right: 25px;
+  right: 23px;
   color: var(--navbar-color);
 }
 

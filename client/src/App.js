@@ -10,7 +10,6 @@ import UserProfile from "./components/UserProfile";
 import Services from "./pages/Services";
 import Setting from "./components/Setting";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -52,10 +51,6 @@ function App() {
 
         <Route exact path="/login">
           <Login />
-        </Route>
-
-        <Route exact path="/signup">
-          <Signup />
         </Route>
       </Switch>
     </Router>
