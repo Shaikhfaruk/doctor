@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BiSearch } from "react-icons/bi";
+import { BiSearch, BiCommentError, BiChat } from "react-icons/bi";
+import { RiServiceFill } from "react-icons/ri";
+import { FaHandsHelping } from "react-icons/fa";
 
 const Navbar = () => {
   document.addEventListener("DOMContentLoaded", function () {
@@ -36,25 +38,29 @@ const Navbar = () => {
 
       <ul className="nav-items">
         <li className="nav-item">
-          <Link to="/about" className="nav-item">
+          <BiCommentError className="nav-item-icon" />
+          <Link to="/about" className="nav-item-link">
             About
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to="/advices" className="nav-item">
+          <FaHandsHelping className="nav-item-icon" />
+          <Link to="/advices" className="nav-item-link">
             Advices
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to="/services" className="nav-item">
+          <RiServiceFill className="nav-item-icon" />
+          <Link to="/services" className="nav-item-link">
             Services
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to="/chats" className="nav-item">
+          <BiChat className="nav-item-icon" />
+          <Link to="/chats" className="nav-item-link">
             Chats
           </Link>
         </li>
