@@ -62,7 +62,7 @@ const Navbar = () => {
 
       <div className="loginbtn">
         <button className="btn">
-          <Link to="/login">Login / Register</Link>
+          <Link to="/login">Login | Register</Link>
         </button>
       </div>
       <div className="menu-btn">
