@@ -148,10 +148,13 @@ a:focus {
 .nav-items {
   display: flex;
   font-size: 1.1rem;
+  position: absolute;
+  right: 170px;
 }
 .nav-item {
-  padding: 0 1rem;
-  height: 2.5em;
+  padding: 0.4rem;
+  height: 2em;
+  border-radius: 0.2em;
   display: flex;
   align-items: center;
   color: var(--secondary-color);
@@ -160,7 +163,7 @@ a:focus {
   background: var(--secondary-color);
 }
 .nav-item-link {
-  padding: 0 0.5em;
+  padding: 0.5em;
 }
 .nav-items > .nav-items-open > .nav-item {
   display: flex;
@@ -214,13 +217,15 @@ a:focus {
   }
   .nav-item .nav-item-icon {
     display: block;
-    color: var(--secondary-color);
   }
   .nav-item {
     width: 100%;
   }
 }
-
+.nav-items-open .nav-item:hover,
+.nav-item a:hover {
+  color: var(--navbar-color);
+}
 /* ============= animation keyframes start ============== */
 
 @-webkit-keyframes navbar-animation {
